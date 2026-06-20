@@ -1,3 +1,8 @@
 spring:
   application:
     name: reactive_rest_api
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5423/db
+    username: user
+    password: secret
