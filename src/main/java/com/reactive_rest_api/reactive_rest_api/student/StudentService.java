@@ -2,6 +2,7 @@ package com.reactive_rest_api.reactive_rest_api.student;
 
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Service
 public class StudentService {
@@ -14,5 +15,9 @@ public class StudentService {
 
   public Flux<Student> findAll(){
     return studentRepository.findAll();
+  }
+
+  public Mono<Student> findId(Integer id){
+    return studentRepository.findById(id);
   }
 }
