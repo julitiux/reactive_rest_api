@@ -13,6 +13,10 @@ public class StudentService {
     this.studentRepository = studentRepository;
   }
 
+  public Mono<Student> save(Student student) {
+    return studentRepository.save(student);
+  }
+
   public Flux<Student> findAll(){
     return studentRepository.findAll();
   }
