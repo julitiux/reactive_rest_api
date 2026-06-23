@@ -24,4 +24,9 @@ public class StudentController {
   Flux<Student> findAll(){
     return studentService.findAll();
   }
+
+  @GetMapping("/{id}")
+  public Mono<Student> finndById(@PathVariable("id") Integer id){
+    return studentService.findId(id);
+  }
 }
