@@ -24,7 +24,7 @@ public class ReactiveRestApiApplication {
             .lastname("lastname" + i)
             .age(i)
             .build()
-        );
+        ).subscribe();
       }
     };
   }
